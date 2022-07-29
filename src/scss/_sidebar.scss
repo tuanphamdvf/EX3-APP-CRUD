@@ -1,0 +1,78 @@
+.wrapper--sidebar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0px;
+    position: absolute;
+    width: 250px;
+    height: 1691px;
+    left: 0px;
+    top: 69px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px;
+    position: absolute;
+    width: 250px;
+    height: 1691px;
+    left: 0px;
+}
+.sidebar--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar--title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    padding: 16px 12px 0px;
+    gap: 22px;
+    height: 40px;
+}
+.sidebar--title---icon {
+    width: 32px;
+    height: 32px;
+}
+.sidebar--title--content {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.sidebar--item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 12px;
+    gap: 22px;
+    height: 116px;
+}
+.sidebar--item--wrapper {
+    width: 159px;
+    height: 24px;
+}
+.sidebar--footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 22px;
+    width: 250px;
+}
+
+.sidebar--footer--button {
+    width: 250px;
+    height: 32px;
+}

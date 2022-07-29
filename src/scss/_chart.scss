@@ -1,0 +1,13 @@
+.chart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 32px;
+    width: 1317px;
+    height: 570.85px;
+
+    background: $white;
+    box-shadow: $boxshadowcolor;
+    border-radius: 16px;
+}

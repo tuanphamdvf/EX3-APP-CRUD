@@ -1,0 +1,14 @@
+{
+  "name": "ex3-app-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w src/scss/app.scss src/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.54.0"
+  }
+}

@@ -1,0 +1,14 @@
+.table3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 16px;
+
+    width: 1317px;
+    height: 473px;
+
+    background: $white;
+    box-shadow: $boxshadowcolor;
+    border-radius: 16px;
+}

@@ -93,7 +93,7 @@ body {
   .footer--content {
     width: 100%;
     height: 176px;
-    margin: 0px;
+    margin: 16px 0px 0px 0px;
   }
   .footet--icon {
     height: 14px;
@@ -428,7 +428,7 @@ body {
 @media only screen and (max-width: 576px) {
   .table1 {
     width: calc(100vw - 32px);
-    padding: 8px;
+    padding: 16px;
     margin-bottom: 16px;
   }
 }
@@ -775,8 +775,8 @@ body {
 @media only screen and (max-width: 576px) {
   .table3 {
     width: 100%;
-    padding: 8px;
-    margin-top: 16px;
+    padding: 16px;
+    margin-top: 32px;
   }
   .table3--item--name {
     width: 60%;

@@ -4,10 +4,71 @@
     align-items: flex-start;
     box-sizing: border-box;
     padding: 24px;
-    gap: 16px;
-    width: 920.67px;
-    height: 448px;
+    max-width: 920.67px;
+    max-height: 448px;
+    width: 69.8%;
+    height: 100%;
     background: $white;
     box-shadow: $boxshadowcolor;
     border-radius: 16px;
+}
+.table2--title {
+    @include fontL;
+    gap: 10px;
+}
+.table2--wrapper--item {
+    width: 100%;
+}
+.table2--item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: $separator-default;
+    padding: 9px 0 9px 0;
+}
+.table2--item--name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $gray900;
+}
+.table2--item--id {
+    @include fontS;
+    line-height: 18px;
+    color: $gray500;
+}
+.table2--item--info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.table2--item--number {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $gray900;
+    margin-right: 6px;
+}
+.table2--item--des {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $gray600;
+}
+//responsive the web
+@media only screen and (max-width: 1024) {
+    .table2 {
+        width: 57%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .table2 {
+        width: 55%;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .table2 {
+        width: 100%;
+    }
 }

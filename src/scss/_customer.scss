@@ -4,11 +4,70 @@
     align-items: flex-start;
     box-sizing: border-box;
     padding: 24px;
-    gap: 16px;
-    width: 380.33px;
+    max-width: 380.33px;
     height: 430px;
-
     background: $white;
     box-shadow: $boxshadowcolor;
     border-radius: 16px;
+    width: 28.8%;
+}
+.table1--title {
+    width: calc(100% - 48px);
+    max-width: 380.33px;
+    max-height: 430px;
+    @include fontL;
+}
+
+.table1--item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 9px 0px;
+    width: 100%;
+    height: 100%;
+    gap: 16px;
+    border-bottom: $separator-default;
+}
+.table--container--item {
+    width: 100%;
+}
+
+.table1--item--img {
+    width: 32px;
+    height: 32px;
+}
+.table1--item-info {
+    display: flex;
+    flex-direction: column;
+}
+.table1--info--name {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+    color: $gray900;
+}
+.table1--info--email {
+    @include fontS;
+    line-height: 150%;
+    color: $gray500;
+}
+//responsive the web
+@media only screen and (max-width: 1024) {
+    .table1 {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .table1 {
+        width: 42%;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .table1 {
+        width: $default-width-wrapper-table-mobile;
+        padding: $default-padding-moblie;
+        margin-bottom: $default-margin-bottom-moblie;
+    }
 }

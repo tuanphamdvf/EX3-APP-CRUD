@@ -1,82 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="src/css/style.css" />
-        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    </head>
 
-    <body>
-        <div class="main">
-            <div class="header">
-                <div class="header--title">CRUD</div>
-                <div class="header--action">
-                    <div class="header--icon">
-                        <div class="header--icon--content">
-                            <img alt="noti" src="/src/icon/notifi.svg"/>
-                        </div>
-                    </div>
-                    <div class="header--img">
-                        <img class="header--img--content" alt="img" src="/src/icon/avata-header.png"/>
-                    </div>
-                </div>
-            </div>
-            <div class="wrapper--sidebar">
-                <div class="sidebar">
-                    <div class="sidebar--content">
-                        <div class="sidebar--title">
-                          <img src="/src/icon/chart.svg" class="sidebar--title---icon">
-                          <span class="sidebar--title--content">Bảng điều khiển</span>
-                        </div>
-                        <div class="sidebar--item">
-                            <div class="sidebar--item--wrapper">
-                                <img src="/src/icon/dataproduct.svg">
-                                <span> Danh sach san pham</span>
-                            </div>
-                            <div class="sidebar--item--wrapper">
-                                <img src="/src/icon/users.svg"/>
-                                
-                             <span> Khach hang</span> </div>
-                            <div class="sidebar--item--wrapper">
-                                <img src="/src/icon/oders.svg"/>
-                                <span>Don hang</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sidebar--footer">
-                        <button class="sidebar--footer--button">Thu gon</button>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="header--title">CRUD</div>
+            <img class="header--title--side" src="/src/icon/sidebar.svg" />
+
+            <div class="header--action">
+                <div class="header--icon">
+                    <div class="header--icon--content">
+                        <img alt="noti" src="/src/icon/notifi.svg" />
                     </div>
                 </div>
-                
-            </div>
-            <div class="wrapper--dasboard">
-                <div class="chart">chart</div>
-                <div class="wrapper--table1--table2">
-                <div class="table1">
-                    <div class="table1--title">Khach hang moi</div>
-                    <div class="table1--item"></div>
-                </div>
-                    <div class="table2">
-                        <div class="table2--title">San pham ban chay</div>
-                        <div class="table2--item"></div>
-                    </div>
-                </div>
-                    <div class="table3">
-                        <div class="table3--title">Don hang gan nhat</div>
-                        <div class="table3--item"></div>
-                    </div>
-                    <div class="wrapper--footer">
-                        <div class="footer">
-                        <span class="footer--content">© 2022 VnSolution. All rights reserved.</span>
-                        <div class="footer--wrapper--icon">icon</div>
-                    </div>
-                </div>
-                
+                <div class="header--img">
+                    <img class="header--img--content" alt="img" src="/src/icon/avata-header.png" />
                 </div>
             </div>
         </div>
-    </body>
+        <div class="wrapper--sidebar">
+            <div class="sidebar">
+                <div class="sidebar--title">
+                    <img src="/src/icon/chart.svg" class="sidebar--title---icon">
+                    <span class="sidebar--title--content">Bảng điều khiển</span>
+                </div>
+                <div class="sidebar--content">
+                    <div class="sidebar--item">
+                        <div class="sidebar--item--wrapper">
+                            <img class="sidebar--item--icon" src="/src/icon/dataproduct.svg">
+                            <span class="sidebar--item--text">Danh sách sản phẩm</span>
+                        </div>
+                        <div class="sidebar--item--wrapper">
+                            <img class="sidebar--item--icon" src="/src/icon/users.svg" />
+
+                            <span class="sidebar--item--text">Khách hàng</span>
+                        </div>
+                        <div class="sidebar--item--wrapper">
+                            <img class="sidebar--item--icon" src="/src/icon/oders.svg" />
+                            <span class="sidebar--item--text">Đơn hàng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar--footer">
+                    <button class="sidebar--footer--button">Thu gọn</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="wrapper--dasboard">
+            <div class="chart">
+                <div class="chart--title">
+                    <span class="chart--title--content">Doanh Thu</span>
+                    <img class="chart--title--icon" src="/src/icon/warn.svg" />
+                </div>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="wrapper--table1--table2">
+                <div class="table1">
+                    <div class="table1--title">Khách hàng mới</div>
+                    <div class="table--container--item">
+                    </div>
+                </div>
+                <div class="table2">
+                    <div class="table2--title">Sản phẩm bán chạy </div>
+                    <div class="table2--wrapper--item">
+                    </div>
+                </div>
+            </div>
+            <div class="table3">
+                <div class="table3--title">
+                    <span class="table3--title--content">Đơn hàng gần đây</span>
+                    <span class="table3--title--des">Danh sách 6 đơn hàng gần nhất</span>
+                </div>
+                <div class="table3--des">
+                    <span class="table3--des--title cusomer">KHÁCH HÀNG</span>
+                    <span class="table3--des--title time">THỜI GIAN</span>
+                    <span class="table3--des--title total">THÀNH TIỀN</span>
+                    <span class="table3--des--title status">TRẠNG THÁI</span>
+                </div>
+                <div class="table3--wrapper--item"></div>
+            </div>
+            <div class="wrapper--footer">
+                <div class="footer">
+                    <span class="footer--content">© 2022 VnSolution. All rights reserved.</span>
+                    <div class="footer--wrapper--icon">
+                        <img class="footet--icon" src="/src/icon/fb.svg" />
+                        <img class="footet--icon" src="/src/icon/twitter.svg" />
+                        <img class="footet--icon" src="/src/icon/github.svg" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    </div>
+</body>
+<!-- chartjs-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/src/component/chart.js"></script>
+<!-- customer-->
+<script src="/src/component/cusomer.js"></script>
+<!-- Product-->
+<script src="/src/component//product.js"></script>
+<!-- Oder-->
+<script src="/src/component//oder.js"></script>
+
+
 </html>

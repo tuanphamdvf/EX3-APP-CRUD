@@ -46,15 +46,48 @@ $blue50: #ebf5ff;
 $white: #ffffff;
 $boxshadowcolor: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
 $fontfamily: 'Inter';
+$separator-default: solid 1px $gray200;
+$default-width-sidebar: 250px;
+$default-width-sidebar-tablet: 48px;
+$default-width-wrapper-table: calc(100vw - 280px);
+$default-width-wrapper-table-tablet: calc(100vw - 78px);
+$default-width-wrapper-table-mobile: calc(100vw - 32px);
+$default-padding-moblie: 8px;
+$default-margin-bottom-moblie: 16px;
 
+@mixin fontL {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+@mixin fontS {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     margin: 0;
+    padding: 0;
 }
 
 .main {
     position: relative;
-    width: 1600px;
+    max-width: 1600px;
     height: 1760px;
+    width: 100vw;
+    box-sizing: border-box;
     background: $gray050;
     font-family: $fontfamily;
+}
+//responsive the web
+@media only screen and (max-width: 576px) {
+    .main {
+        height: 2165px;
+        min-width: 360px;
+    }
 }

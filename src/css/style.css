@@ -563,9 +563,7 @@ body {
   box-sizing: border-box;
   max-width: 194px;
   width: 20vw;
-  height: 8vw;
-  max-height: 80px;
-  min-height: 50px;
+  height: 80px;
   padding: 8px;
   min-width: 194px;
   border-radius: 16px;

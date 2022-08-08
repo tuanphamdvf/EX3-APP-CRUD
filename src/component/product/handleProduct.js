@@ -1,3 +1,4 @@
+// RENDER PRODUCT
 function renderAddProduct(elementAdd) {
     elementAdd.innerHTML = `<div class="addproduct--header">
         <span class="addproduct--header--title">Thêm mới sản phẩm
@@ -12,15 +13,16 @@ function renderAddProduct(elementAdd) {
             <div class="addproduct--name">
                 <input class="addproduct--input--name" placeholder=" Tên sản phẩm" id="addproduct__name" />
             </div>
-            <div class="addproduct--number"> <input placeholder="cái" class="addproduct--input--number"
+            <div class="addproduct--number"> <input placeholder="cái"  class="addproduct--input--number"
                     id="addproduct__number" /><span class="addproduct--number--after">Số lượng</span></div>
             <div class="addproduct--group">
                 <select class="addproduct--input--group" id="addproduct__group">
                     <option value="" disabled selected hidden>Loại SP</option>
-                    <option>chuột </option>
-                    <option>bàn phím</option>
-                    <option>ghế công thái học</option>
-                    <option>hub</option>
+                    <option>Chuột </option>
+                    <option>Bàn phím</option>
+                    <option>Ghế công thái học</option>
+                    <option>Hub</option>
+                    <option>Mới tạo</option>
                 </select>
             </div>
             <div class="addproduct--status">
@@ -33,11 +35,27 @@ function renderAddProduct(elementAdd) {
             <div class="addproduct--date"> <input type="date" class="addproduct--input--date" /><span
                     class="addproduct--number--date" id="addproduct__date">Ngày tạo </span></div>
             <div class="addproduct--price"> <input placeholder="VND" class="addproduct--input--price"
-                    id="addproduct__price" /><span class="addproduct--number--price">Giá bán</span></div>
+                    id="addproduct__price"/><span class="addproduct--number--price">Giá bán</span></div>
         </div>
     </div>`;
 }
+// ---- ADD PRODUCT ----
 
+// // Validate -from
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Mong muốn của chúng ta
+//     Validator({
+//         form: '#form-1',
+//         formGroupSelector: '.form-group',
+//         errorSelector: '.form-message',
+//         rules: [Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn')],
+//         onSubmit: function (data) {
+//             // Call API
+//             console.log(data);
+//         },
+//     });
+// });
+//Function - add one product to the last array
 function addProductJson(data, callback) {
     let options = {
         method: 'POST',
@@ -52,22 +70,27 @@ function addProductJson(data, callback) {
         })
         .then(callback);
 }
+// Function -obtain input product value
 function handleOnclickAddproduct() {
     const nameNewProduct = document.getElementById('addproduct__name').value;
     const numberNewProduct = document.getElementById('addproduct__number').value;
     const groupNewProduct = document.getElementById('addproduct__group').value;
     const statusNewProduct = document.getElementById('addproduct__status').value;
     const priceNewProduct = document.getElementById('addproduct__price').value;
-    console.log(nameNewProduct, numberNewProduct, groupNewProduct, statusNewProduct, priceNewProduct);
+    const elementDateValue = document.querySelector('.addproduct--input--date').value;
+    if (numberNewProduct == '') {
+    }
     let itemData = {
         name: nameNewProduct,
         number: numberNewProduct,
-        createDate: ' June 01, 2022',
+        createDate: elementDateValue,
         group: groupNewProduct,
         price: priceNewProduct,
     };
-    addProductJson(itemData);
+    // addProductJson(itemData);
 }
+//---DELETE PRODUCT---
+//function:  When using onclick, remove one product.
 function handleDeleteProduct(id) {
     let options = {
         method: 'DELETE',
@@ -78,26 +101,13 @@ function handleDeleteProduct(id) {
     fetch(productApi + '/' + id, options).then(function (response) {
         return response.json();
     });
-    // const elementProductTarget = document.getElementById('product__element__' + id);
-    // elementProductTarget.remove();
 }
-function showPopupDelete(item) {
-    // const buttonHandleDelete = document.querySelector('.popup--delete');
-    // buttonHandleDelete.style.display = 'flex';
-    const elementProduct = document.getElementById('delete__element');
-    console.log(elementProduct);
-    elementProduct.innerHTML = `<div class="popup--delete">
-    <div class="dlproduct--wrapper">
-        <span class="content--delete">Cảnh báo! Bạn có chắc chắn muốn xoá sản phẩm ${item.name}!</span>
-        <div class="dlproduct--wrapper--button">
-        <a onclick="handleDeleteProduct(${item.id})" class="dlproduct--button--delete">Xoá</a>
-            <a onclick = "hidePopupDeleteProduct()"class="dlproduct--button--back">Quay lại</a>
-        </div>
-    </div></div>`;
+// Display popup delete
+function showPopupDelete(id) {
+    const buttonHandleDelete = document.querySelector('.popup--delete--' + id);
+    buttonHandleDelete.style.display = 'flex';
 }
-function hidePopupDeleteProduct() {
-    // const buttonHandleDelete = document.querySelector('.popup--delete');
-    // buttonHandleDelete.style.display = 'none';
-    const elementProduct = document.getElementById('delete__element');
-    elementProduct.in;
+function hidePopupDeleteProduct(id) {
+    const buttonHandleDelete = document.querySelector('.popup--delete--' + id);
+    buttonHandleDelete.style.display = 'none';
 }

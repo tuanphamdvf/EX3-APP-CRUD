@@ -64,30 +64,54 @@ $default-margin-bottom-moblie: 16px;
     font-size: 12px;
     font-weight: 400;
 }
-
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flexCenterColum {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.main {
-    position: relative;
-    max-width: 1600px;
-    height: 1760px;
-    width: 100vw;
-    box-sizing: border-box;
-    background: $gray050;
     font-family: $fontfamily;
 }
+.green--status {
+    color: $green800;
+    background-color: $green100;
+}
+.red--status {
+    color: $red800;
+    background-color: $red100;
+}
+.blue--status {
+    color: $blue800;
+    background-color: $blue100;
+}
+.gray--status {
+    color: $gray800;
+    background-color: $gray100;
+}
+a {
+    text-decoration: none;
+}
+.active {
+    color: $blue600 !important;
+}
+
 //responsive the web
 @media only screen and (max-width: 576px) {
     .main {
-        height: 2165px;
         min-width: 360px;
     }
 }

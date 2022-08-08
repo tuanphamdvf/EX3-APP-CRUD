@@ -1,4 +1,3 @@
-const cx = document.querySelector('.table--container--item');
 const ARRAY_ITEM = [
     {
         id: 202201,
@@ -37,10 +36,13 @@ const ARRAY_ITEM = [
         avata: '/src/icon/avata6.png',
     },
 ];
-
-function render() {
-    ARRAY_ITEM.forEach((item) => {
-        cx.innerHTML += `<div><div class="table1--item"> <img class="table1--item--img" src=${item.avata} /><div class= "table1--info--name ">${item.name}<div class="table1--info--email">${item.email}</div></div></div></div>`;
+//check data in localstorage, and render
+const arrNewCustomer = JSON.parse(localStorage.getItem('newCustomer'));
+if (!arrNewCustomer) {
+    localStorage.setItem('newCustomer', JSON.stringify(ARRAY_ITEM));
+}
+function renderNewCustomer(elementNewCustomer) {
+    arrNewCustomer.forEach((item) => {
+        elementNewCustomer.innerHTML += `<div><div class="table1--item"> <img class="table1--item--img" src=${item.avata} /><div class= "table1--info--name ">${item.name}<div class="table1--info--email">${item.email}</div></div></div></div>`;
     });
 }
-render();

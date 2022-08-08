@@ -1,0 +1,468 @@
+// Chart dashboard
+.chart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 16px;
+    max-width: 1317px;
+    width: 100%;
+    height: 570.85px;
+    background: $white;
+    box-shadow: $boxshadowcolor;
+    border-radius: 16px;
+    padding-bottom: 48px;
+}
+#myChart {
+    width: 100%;
+    height: 90%;
+    margin-bottom: 16px;
+}
+.chart--title {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin-bottom: 16px;
+    gap: 10px;
+}
+.chart--title--content {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $gray900;
+}
+//  custom tooltip
+.chart--title--icon {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+}
+#chartjs-tooltip {
+    background-color: $gray050;
+    box-sizing: border-box;
+    max-width: 194px;
+    width: 20vw;
+    height: 80px;
+    padding: 8px;
+    min-width: 194px;
+    border-radius: 16px;
+}
+.tooltip--title {
+    display: flex;
+    justify-self: start;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $gray600;
+    margin-left: 16px;
+}
+//add a curve tail
+.tooltip--title:after {
+    content: '';
+    background-color: $gray050;
+    height: 32px;
+    width: 18px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+}
+.tooltip--body {
+    @include flexCenter;
+}
+.tooltip--body--icon {
+    width: 12px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: $green600;
+    margin-left: 16px;
+    margin-right: 8px;
+}
+.tooltip--body--tilte {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.tooltip--body--value {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+//newcustomer
+.table1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 24px;
+    max-width: 380.33px;
+
+    background: $white;
+    box-shadow: $boxshadowcolor;
+    border-radius: 16px;
+    width: 28.8%;
+}
+.table1--title {
+    width: calc(100% - 48px);
+    max-width: 380.33px;
+    max-height: 430px;
+    @include fontL;
+}
+
+.table1--item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 9px 0px;
+    width: 100%;
+    height: 100%;
+    gap: 16px;
+    border-bottom: $separator-default;
+}
+.table--container--item {
+    width: 100%;
+}
+
+.table1--item--img {
+    width: 32px;
+    height: 32px;
+}
+.table1--item-info {
+    display: flex;
+    flex-direction: column;
+}
+.table1--info--name {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+    color: $gray900;
+}
+.table1--info--email {
+    @include fontS;
+    line-height: 150%;
+    color: $gray500;
+}
+
+// product sale
+.table2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 24px;
+    max-width: 920.67px;
+    width: 69.8%;
+    height: 100%;
+    background: $white;
+    box-shadow: $boxshadowcolor;
+    border-radius: 16px;
+}
+.table2--title {
+    @include fontL;
+    gap: 10px;
+}
+.table2--wrapper--item {
+    width: 100%;
+}
+.table2--item {
+    @include flexBetween;
+    width: 100%;
+    border-bottom: $separator-default;
+    padding: 9px 0 9px 0;
+}
+.table2--item--name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $gray900;
+}
+.table2--item--id {
+    @include fontS;
+    line-height: 18px;
+    color: $gray500;
+}
+.table2--item--info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.table2--item--number {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $gray900;
+    margin-right: 6px;
+}
+.table2--item--des {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $gray600;
+}
+
+// oder
+.table3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 16px;
+    width: 100%;
+    background: $white;
+    box-shadow: $boxshadowcolor;
+    border-radius: 16px;
+    max-width: 1317px;
+}
+.table3--title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.table3--title--content {
+    @include fontL;
+    color: $gray900;
+}
+.table3--title--des {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $gray500;
+}
+
+.table3--des {
+    height: 50px;
+    width: 100%;
+    @include flexCenter;
+    border-radius: 8px;
+    background-color: $gray050;
+}
+
+.table3--des--title {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: $gray600;
+    padding: 16px;
+    width: 25%;
+}
+.table3--wrapper--item {
+    width: 100%;
+}
+.table3--item {
+    height: 54px;
+    width: 100%;
+    @include flexCenter;
+    border-radius: 8px;
+}
+.table--item--bold {
+    background-color: $gray050;
+}
+.table3--item--name {
+    width: 25%;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: $gray900;
+    padding: 16px;
+}
+.table3--item--date {
+    width: 25%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $gray500;
+    padding: 16px;
+}
+.table3--item--number {
+    width: 25%;
+    font-size: 16;
+    font-weight: 500;
+    line-height: 24px;
+    color: $gray900;
+    padding: 16px;
+}
+.table3--item--status {
+    width: 25%;
+    padding: 16px;
+}
+.table3--item--des {
+    @include fontS;
+    line-height: 150%;
+    width: 100%;
+    padding: 4px 8px 4px 8px;
+    border-radius: 12px;
+}
+
+//
+.table2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 24px;
+    max-width: 920.67px;
+    max-height: 448px;
+    width: 69.8%;
+    height: 100%;
+    background: $white;
+    box-shadow: $boxshadowcolor;
+    border-radius: 16px;
+}
+.table2--title {
+    @include fontL;
+    gap: 10px;
+}
+.table2--wrapper--item {
+    width: 100%;
+}
+.table2--item {
+    @include flexBetween;
+    width: 100%;
+    border-bottom: $separator-default;
+    padding: 9px 0 9px 0;
+}
+.table2--item--name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $gray900;
+}
+.table2--item--id {
+    @include fontS;
+    line-height: 18px;
+    color: $gray500;
+}
+.table2--item--info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.table2--item--number {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $gray900;
+    margin-right: 6px;
+}
+.table2--item--des {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $gray600;
+}
+
+//responsive
+@media only screen and (max-width: 1024px) {
+    .chart {
+        width: $default-width-wrapper-table-tablet;
+    }
+    .table2 {
+        width: 57%;
+    }
+    .table3 {
+        width: $default-width-wrapper-table-tablet;
+    }
+    .table2 {
+        width: 57%;
+    }
+    .table1 {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .table2 {
+        width: 55%;
+    }
+    .table1 {
+        width: 42%;
+    }
+}
+@media only screen and (max-width: 576px) {
+    // Chart KPI
+    .chart {
+        box-sizing: border-box;
+        width: $default-width-wrapper-table-mobile;
+        padding: 8px;
+        height: 474px;
+    }
+    #myChart {
+        padding-bottom: 32px;
+    }
+    // newCustomer table
+    .table1 {
+        width: 100%;
+        padding: $default-padding-moblie;
+        margin-bottom: $default-margin-bottom-moblie;
+        max-width: 100%;
+    }
+    //product table
+    .table2 {
+        width: 100%;
+    }
+    // new oder table
+    .table3 {
+        width: 100%;
+        padding: $default-padding-moblie;
+        margin-top: 32px;
+    }
+    .table3--item--name {
+        width: 60%;
+    }
+    .table3--item--date {
+        width: 40%;
+    }
+    .table3--item--number {
+        display: none;
+    }
+    .table3--item--status {
+        display: none;
+    }
+    .table3--des {
+        justify-content: space-between;
+    }
+
+    .status {
+        display: none;
+    }
+    .total {
+        display: none;
+    }
+    .cusomer {
+        width: 66%;
+    }
+    .time {
+        width: 33%;
+    }
+    .table2 {
+        width: 100%;
+    }
+    //Footer
+    .wrapper--footer {
+        height: 176px;
+        width: $default-width-wrapper-table-mobile;
+        left: 16px;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 48px 32px 32px 32px;
+    }
+    .footer--content {
+        width: 100%;
+        height: 176px;
+        margin: 16px 0px 0px 0px;
+    }
+    .footet--icon {
+        height: 14px;
+        width: 14px;
+    }
+    .footer--wrapper--icon {
+        margin-top: 32px;
+    }
+}

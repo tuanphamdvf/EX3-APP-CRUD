@@ -1,74 +1,936 @@
-.table2 {
+.wrapper--product {
+    display: flex;
+    width: 100%;
+    max-width: 1317px;
+    min-height: 799px;
+    box-sizing: border-box;
+    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $white;
+    margin-top: -16px;
+    border-radius: 16px;
+    padding: 16px;
+    position: relative;
+}
+.table--product {
+    width: 100%;
+    min-height: 591px;
+    margin-bottom: 32px;
+}
+.table--product--header {
+    width: 100%;
+    margin-top: 32px;
+}
+.table--product--title {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 31px 16px 16px 16px;
+}
+
+.table--product--action {
+    width: 100%;
+    @include flexBetween;
+}
+
+.product--search--wrapper {
+    height: 40px;
+    width: 367px;
+    position: relative;
+    margin-top: 16px;
+    border-radius: 4px;
+    border: solid 1px $gray200;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    box-shadow: $boxshadowcolor;
+}
+.product--search--input {
+    width: 80%;
+    height: 80%;
+    border: none;
+    outline: none;
+    padding-left: 8px;
+}
+.search--icon {
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+    &:active {
+        background-color: $gray050;
+    }
+}
+
+///
+.table--product {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     box-sizing: border-box;
-    padding: 24px;
-    max-width: 920.67px;
-    max-height: 448px;
-    width: 69.8%;
-    height: 100%;
-    background: $white;
-    box-shadow: $boxshadowcolor;
-    border-radius: 16px;
-}
-.table2--title {
-    @include fontL;
-    gap: 10px;
-}
-.table2--wrapper--item {
+    padding: 16px;
     width: 100%;
 }
-.table2--item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.product--header--wrapper {
     width: 100%;
     border-bottom: $separator-default;
-    padding: 9px 0 9px 0;
 }
-.table2--item--name {
-    font-size: 16px;
+.product--header--content {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: $gray050;
+}
+.product--header--title {
+    font-size: 12px;
+    font-weight: 600px;
+    line-height: 18px;
+    width: 14.2%;
+    text-align: start;
+    padding: 16px;
+}
+.product--wrapper--item {
+    width: 100%;
+}
+.product--item {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.product--item--content {
+    width: 14.2%;
+    font-size: 14px;
     font-weight: 600;
-    line-height: 24px;
+    line-height: 21px;
     color: $gray900;
+    text-align: start;
+    padding: 16px;
+    height: 54px;
+    display: flex;
+    align-items: center;
 }
-.table2--item--id {
-    @include fontS;
+.product--item--time {
+    width: 14.2%;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 18px;
     color: $gray500;
+    text-align: start;
+    padding: 16px;
+    height: 54px;
 }
-.table2--item--info {
+.wrapper--action--left {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
 }
-.table2--item--number {
-    font-size: 16px;
+
+.product--button--add {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
     font-weight: 600;
-    line-height: 24px;
-    color: $gray900;
-    margin-right: 6px;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: $blue600;
+    color: $white;
+    border-radius: 8px;
+    width: 102px;
+    height: 39px;
+    cursor: pointer;
+    @include flexCenter;
 }
-.table2--item--des {
-    font-size: 16px;
+.product--button--filter {
+    width: 42px;
+    height: 21px;
+    background-color: $white;
+    color: $blue600;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.container--icon--product {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.product--icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-left: 12px;
+    display: block;
+}
+.product--item--status {
+    width: 72px;
+    height: 22px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 400px;
+    line-height: 22px;
+    text-align: center;
+}
+//paging
+.wrapper--paging {
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+
+.paging--text {
+    width: 61px;
+    height: 20px;
     font-weight: 400;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 20px;
+    color: $gray500;
+}
+.paging--short {
+    width: 14px;
+    height: 19px;
+    right: 24px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+}
+.paging--short--number {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19px;
+}
+.paging--short--icon {
+    margin-left: 8px;
+    color: $gray500;
+    cursor: pointer;
+}
+.paging--count {
+    width: 76px;
+    height: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 166%;
+    color: $gray900;
+    margin-left: 16px;
+}
+.paging--action {
+    @include flexBetween;
+    width: 80px;
+}
+.paging--action--icon {
+    padding: 10px;
+    width: 100%;
+    margin-left: 16px;
+    cursor: pointer;
+    transition: background 0.4s linear;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.5);
+    }
+}
+//addproduct
+.addproduct--wrapper {
+    height: 372px;
+    width: 95%;
+    box-sizing: border-box;
+    background-color: $white;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px;
+}
+.addproduct--header {
+    @include flexBetween;
+    height: 60px;
+    box-sizing: border-box;
+}
+.addproduct--header--title {
+    @include fontL;
+}
+.addproduct--action {
+    width: 200px;
+    height: 100%;
+    @include flexCenter;
+}
+.addproduct--save {
+    @include flexCenter;
+    width: 79px;
+    height: 39px;
+    margin-right: 16px;
+    background-color: $blue500;
+    color: $white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.addproduct--back {
+    width: 89px;
+    height: 39px;
+    @include flexCenter;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $gray700;
+    cursor: pointer;
+}
+.wrapper--gribsytem {
+    box-sizing: border-box;
+    padding: 32px, 24px, 32px, 24px;
+}
+.addproduct--content {
+    display: grid;
+
+    margin-top: 16px;
+    grid-template-columns: 46% 46%;
+    grid-template-rows: 56px 56px 56px;
+    height: 280px;
+    grid-gap: 42px;
+}
+.addproduct--name {
+    position: relative;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+
+.addproduct--group {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+.addproduct--date {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    position: relative;
+}
+.addproduct--number--date {
+    content: 'Giá bán';
+    background-color: $white;
+    height: 12px;
+    width: 52px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
+}
+
+.addproduct--number {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+//
+.addproduct--number--after {
+    content: 'Ngày tạo';
+    background-color: $white;
+    height: 12px;
+    width: 52px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
+}
+.addproduct--status {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+.addproduct--price {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    position: relative;
+}
+//
+.addproduct--number--price {
+    content: 'Giá bán';
+    background-color: $white;
+    height: 12px;
+    width: 52px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
+}
+//input
+.addproduct--input--name {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+
+.addproduct--input--group {
+    border: none;
+
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+
+.addproduct--input--date {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+    cursor: pointer;
+}
+
+.addproduct--input--number {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+.addproduct--input--status {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+.addproduct--input--price {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+
+//edit product
+.editproduct--wrapper {
+    height: 372px;
+    box-sizing: border-box;
+    background-color: $white;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px;
+}
+.editproduct--header {
+    @include flexBetween;
+    height: 60px;
+    box-sizing: border-box;
+}
+.editproduct--header--title {
+    @include fontL;
+}
+.editproduct--action {
+    width: 200px;
+    height: 100%;
+    @include flexCenter;
+}
+.editproduct--save {
+    @include flexCenter;
+    width: 79px;
+    height: 39px;
+    margin-right: 16px;
+    background-color: $blue500;
+    color: $white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.editproduct--back {
+    width: 89px;
+    height: 39px;
+    @include flexCenter;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $gray700;
+    cursor: pointer;
+}
+.wrapper--gribsytem {
+    box-sizing: border-box;
+    padding: 32px, 24px, 32px, 24px;
+}
+.editproduct--content {
+    display: grid;
+
+    margin-top: 16px;
+    grid-template-columns: 46% 46%;
+    grid-template-rows: 56px 56px 56px;
+    height: 280px;
+    grid-gap: 42px;
+}
+.editproduct--name {
+    position: relative;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+.editproduct--name--after {
+    background-color: $white;
+    height: 12px;
+    width: 86px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
+}
+
+.editproduct--group {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+.editproduct--date {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    position: relative;
+}
+.editproduct--number--date {
+    content: 'Giá bán';
+    background-color: $white;
+    height: 12px;
+    width: 52px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
+}
+
+.editproduct--number {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+//
+.editproduct--number--after {
+    content: 'Ngày tạo';
+    background-color: $white;
+    height: 12px;
+    width: 52px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
+}
+.editproduct--status {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+.editproduct--price {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    position: relative;
+}
+//
+.editproduct--number--price {
+    content: 'Giá bán';
+    background-color: $white;
+    height: 12px;
+    width: 52px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
+}
+//input
+.editproduct--input--name {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+
+.editproduct--input--group {
+    border: none;
+
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+    color: $blue500;
+}
+
+.editproduct--input--date {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+    cursor: pointer;
+}
+
+.editproduct--input--number {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+.editproduct--input--status {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+    color: $blue500;
+}
+.editproduct--input--price {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+
+// filter
+.filter--wrapper {
+    height: 200px;
+    box-sizing: border-box;
+    background-color: $white;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px;
+}
+
+.wrapper--gribsytem {
+    box-sizing: border-box;
+    padding: 32px, 24px, 32px, 24px;
+}
+.filter--content {
+    display: grid;
+
+    margin-top: 16px;
+    grid-template-columns: 46% 46%;
+    grid-template-rows: 56px 56px;
+    height: 200px;
+    grid-gap: 42px;
+}
+.filter--name {
+    position: relative;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+
+.filter--group {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+.filter--date {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    position: relative;
+}
+.filter--number--date {
+    content: 'Giá bán';
+    background-color: $white;
+    height: 12px;
+    width: 52px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
+}
+
+.filter--number {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+//
+.filter--number--after {
+    content: 'Ngày tạo';
+    background-color: $white;
+    height: 12px;
+    width: 52px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
+}
+.filter--status {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+.filter--price {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px $gray200;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    position: relative;
+}
+//
+.filter--number--price {
+    content: 'Giá bán';
+    background-color: $white;
+    height: 12px;
+    width: 52px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
+}
+//input
+.filter--input--name {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+
+.filter--input--group {
+    border: none;
+
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+    color: $blue500;
+}
+
+.filter--input--date {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+    cursor: pointer;
+}
+
+.filter--input--number {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+.filter--input--status {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+    color: $blue500;
+}
+.filter--input--price {
+    border: none;
+    height: 24px;
+    padding-left: 8px;
+    width: 96%;
+    outline: none;
+}
+
+//delete popup
+.popup--delete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 113;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.05);
+}
+.dlproduct--wrapper {
+    @include flexCenterColum;
+    margin-bottom: 250px;
+    width: 50vw;
+    height: 140px;
+    align-items: center;
+    box-shadow: $boxshadowcolor;
+    border-radius: 16px;
+    background-color: $gray050;
+}
+.dlproduct--wrapper--button {
+    @include flexBetween;
+    width: 30%;
+}
+.content--delete {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
     color: $gray600;
+    margin-bottom: 32px;
+    width: 100%;
 }
-//responsive the web
-@media only screen and (max-width: 1024) {
-    .table2 {
-        width: 57%;
-    }
+
+.dlproduct--button--back {
+    box-sizing: border-box;
+    border: none;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    background-color: $blue600;
+    color: $white;
+    border-radius: 8px;
+    width: 102px;
+    height: 39px;
+    cursor: pointer;
+    @include flexCenter;
 }
-@media only screen and (max-width: 768px) {
-    .table2 {
-        width: 55%;
-    }
-}
-@media only screen and (max-width: 576px) {
-    .table2 {
-        width: 100%;
-    }
+.dlproduct--button--delete {
+    box-sizing: border-box;
+    border: none;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    background-color: $red500;
+    color: $white;
+    border-radius: 8px;
+    width: 102px;
+    height: 39px;
+    cursor: pointer;
+    @include flexCenter;
 }

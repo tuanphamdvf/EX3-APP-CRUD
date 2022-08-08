@@ -1,4 +1,3 @@
-const productElement = document.querySelector('.table2--wrapper--item');
 const ARRAY_ITEM_PRODUCT = [
     {
         id: 'SP202201',
@@ -43,10 +42,14 @@ const ARRAY_ITEM_PRODUCT = [
         createDate: 'June 01, 2022',
     },
 ];
+//check data in localstorage, and render
+const arrNewProduct = JSON.parse(localStorage.getItem('newProduct'));
+if (!arrNewProduct) {
+    localStorage.setItem('newProduct', JSON.stringify(ARRAY_ITEM_PRODUCT));
+}
 
-function render() {
-    ARRAY_ITEM_PRODUCT.forEach((item) => {
+function renderProduct(productElement) {
+    arrNewProduct.forEach((item) => {
         productElement.innerHTML += `<div class="table2--item"> <div class="table2--item--info"><span class="table2--item--name">${item.name}</span><span class="table2--item--id">Mã SP: ${item.id}</span></div> <div class="table2--item--sale"><span class="table2--item--number">${item.sales}</span><span class="table2--item--des">Sales</span></div></div>`;
     });
 }
-render();

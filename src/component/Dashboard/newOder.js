@@ -1,4 +1,3 @@
-const oderElement = document.querySelector('.table3--wrapper--item');
 const ARRAY_ODER = [
     {
         id: 20220701,
@@ -45,10 +44,15 @@ const ARRAY_ODER = [
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 }
+//check data in localstorage, and render
+const arrNewOder = JSON.parse(localStorage.getItem('newOder'));
+if (!arrNewOder) {
+    localStorage.setItem('newOder', JSON.stringify(ARRAY_ODER));
+}
 
-function render() {
+function renderOder(oderElement) {
     let focusElement;
-    ARRAY_ODER.forEach((item, index) => {
+    arrNewOder.forEach((item, index) => {
         if (index != 0 && index % 2 != 0) {
             focusElement = 'table--item--bold';
         } else {
@@ -58,4 +62,3 @@ function render() {
         oderElement.innerHTML += `<div class="table3--item ${focusElement} "><span class="table3--item--name">${item.name}</span><span class="table3--item--date">${item.time}</span><span class="table3--item--number">${total} VND</span><div class="table3--item--status "> <span class="table3--item--des ${item.color}">${item.status}</span> </div></div>`;
     });
 }
-render();

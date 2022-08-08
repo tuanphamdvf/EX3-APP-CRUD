@@ -1,16 +1,20 @@
+.container {
+    display: flex;
+    margin-top: 70px;
+    background-color: $gray050;
+}
+#main--page {
+    flex: 1;
+}
 .wrapper--dasboard {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     box-sizing: border-box;
     padding: 16px;
     gap: 16px;
-    position: absolute;
-    max-width: 1349px;
-    width: calc(100vw - 251px);
-    height: 1691.85px;
-    left: 250px;
-    top: 70px;
 }
 .wrapper--table1--table2 {
     display: flex;
@@ -20,7 +24,7 @@
     padding: 0px;
     gap: 16px;
     max-width: 1317px;
-    width: $default-width-wrapper-table;
+    width: 100%;
     height: 448px;
 }
 //responsive the web

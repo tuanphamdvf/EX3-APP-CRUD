@@ -1,16 +1,17 @@
 .wrapper--footer {
     padding: 0px;
+    box-sizing: border-box;
     background: $white;
     border-radius: 16px;
     margin-bottom: 16px;
-    width: $default-width-wrapper-table;
+    width: 100%;
+    max-width: 1317px;
 }
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 1318px;
     width: 100%;
     height: 120px;
 }
@@ -42,29 +43,8 @@
 @media only screen and (max-width: 1024px) {
     .wrapper--footer {
         width: $default-width-wrapper-table-tablet;
+        left: 64px;
     }
 }
 @media only screen and (max-width: 576px) {
-    .wrapper--footer {
-        height: 176px;
-        width: $default-width-wrapper-table-mobile;
-    }
-    .footer {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 48px 32px 32px 32px;
-    }
-    .footer--content {
-        width: 100%;
-        height: 176px;
-        margin: 16px 0px 0px 0px;
-    }
-    .footet--icon {
-        height: 14px;
-        width: 14px;
-    }
-    .footer--wrapper--icon {
-        margin-top: 32px;
-    }
 }

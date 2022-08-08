@@ -1,16 +1,18 @@
 .header {
     display: flex;
-    flex-direction: row;
     align-items: center;
     padding: 0px 20px;
+    width: 100%;
     max-width: 1600px;
-    width: 100vw;
     height: 69px;
     align-self: stretch;
-    flex-grow: 1;
     box-sizing: border-box;
     background: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
     border-bottom: $separator-default;
+    z-index: 111;
 }
 
 .header--title {
@@ -38,10 +40,7 @@
 }
 
 .header--icon {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     padding: 4px;
     width: 32px;
     height: 32px;
@@ -50,10 +49,7 @@
 }
 
 .header--icon--content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     padding: 4px;
     cursor: pointer;
     width: 32px;
@@ -64,10 +60,8 @@
 }
 
 .header--img {
-    display: flex;
+    @include flexCenter;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 0px;
     width: 32px;
     height: 32px;

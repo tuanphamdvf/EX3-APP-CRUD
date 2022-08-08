@@ -8,11 +8,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="src/css/style.css" />
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 </head>
 
 <body>
     <div class="main">
-        <div class="header">
+        <header class="header">
             <div class="header--title">CRUD</div>
             <img class="header--title--side" src="/src/icon/sidebar.svg" />
 
@@ -26,96 +32,60 @@
                     <img class="header--img--content" alt="img" src="/src/icon/avata-header.png" />
                 </div>
             </div>
-        </div>
-        <div class="wrapper--sidebar">
-            <div class="sidebar">
-                <div class="sidebar--title">
-                    <img src="/src/icon/chart.svg" class="sidebar--title---icon">
-                    <span class="sidebar--title--content">Bảng điều khiển</span>
-                </div>
-                <div class="sidebar--content">
-                    <div class="sidebar--item">
-                        <div class="sidebar--item--wrapper">
-                            <img class="sidebar--item--icon" src="/src/icon/dataproduct.svg">
-                            <span class="sidebar--item--text">Danh sách sản phẩm</span>
-                        </div>
-                        <div class="sidebar--item--wrapper">
-                            <img class="sidebar--item--icon" src="/src/icon/users.svg" />
+        </header>
+        <div class="container">
+            <div class="wrapper--sidebar">
+                <div class="sidebar ">
+                    <a href="/" class="sidebar--title " id="title__dashbroad">
+                        <i class="fas fa-solid fa-square-poll-vertical  sidebar--item--icon "></i>
+                        <span class="sidebar--title--content">Bảng điều khiển</span>
+                    </a>
+                    <div class="sidebar--content">
+                        <div class="sidebar--item">
+                            <a href="/#product" class="sidebar--item--wrapper  " id="title__product">
+                                <i class="fa-solid fa-database sidebar--item--icon  "></i>
 
-                            <span class="sidebar--item--text">Khách hàng</span>
-                        </div>
-                        <div class="sidebar--item--wrapper">
-                            <img class="sidebar--item--icon" src="/src/icon/oders.svg" />
-                            <span class="sidebar--item--text">Đơn hàng</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar--footer">
-                    <button class="sidebar--footer--button">Thu gọn</button>
-                </div>
-            </div>
+                                <span class="sidebar--item--text  ">Danh sách sản
+                                    phẩm</span>
+                            </a>
+                            <a href="/#user" class="sidebar--item--wrapper" id="title__user">
+                                <i class="fa-solid fa-user-group sidebar--item--icon "></i>
 
-        </div>
-        <div class="wrapper--dasboard">
-            <div class="chart">
-                <div class="chart--title">
-                    <span class="chart--title--content">Doanh Thu</span>
-                    <img class="chart--title--icon" src="/src/icon/warn.svg" />
-                </div>
-                <canvas id="myChart"></canvas>
-            </div>
-            <div class="wrapper--table1--table2">
-                <div class="table1">
-                    <div class="table1--title">Khách hàng mới</div>
-                    <div class="table--container--item">
+                                <span class="sidebar--item--text">Khách hàng</span>
+                            </a>
+                            <a href="/#addProduct" class="sidebar--item--wrapper" id="title__oder">
+                                <i class="fa-solid fa-file-lines sidebar--item--icon "></i>
+                                <span class="sidebar--item--text">Đơn hàng</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="table2">
-                    <div class="table2--title">Sản phẩm bán chạy </div>
-                    <div class="table2--wrapper--item">
+                    <div class="sidebar--footer">
+                        <button class="sidebar--footer--button">Thu gọn</button>
                     </div>
                 </div>
             </div>
-            <div class="table3">
-                <div class="table3--title">
-                    <span class="table3--title--content">Đơn hàng gần đây</span>
-                    <span class="table3--title--des">Danh sách 6 đơn hàng gần nhất</span>
-                </div>
-                <div class="table3--des">
-                    <span class="table3--des--title cusomer">KHÁCH HÀNG</span>
-                    <span class="table3--des--title time">THỜI GIAN</span>
-                    <span class="table3--des--title total">THÀNH TIỀN</span>
-                    <span class="table3--des--title status">TRẠNG THÁI</span>
-                </div>
-                <div class="table3--wrapper--item"></div>
-            </div>
-            <div class="wrapper--footer">
-                <div class="footer">
-                    <span class="footer--content">© 2022 VnSolution. All rights reserved.</span>
-                    <div class="footer--wrapper--icon">
-                        <img class="footet--icon" src="/src/icon/fb.svg" />
-                        <img class="footet--icon" src="/src/icon/twitter.svg" />
-                        <img class="footet--icon" src="/src/icon/github.svg" />
-
-                    </div>
-                </div>
+            <div id="main--page">
+                <!-- html -->
             </div>
         </div>
 
+    </div>
+    <div class="wrapper--loader" id="loader">
+        <div class="loading"></div>
+    </div>
+    </div>
+    <script type="module" src="./src/component/Hanlder/Handler.js"></script>
+    <script src="./src/component/product/renderProduct.js"></script>
+    <script src="./src/component/Dashboard/chart.js"></script>
+    <script src="./src/component/Dashboard/newCustomer.js"></script>
+    <script src="./src/component/Dashboard/newOder.js"></script>
+    <script src="./src/component/Dashboard/newProduct.js"></script>
+    <script src="./src/Data/productApi.js"></script>
+    <script src="/src/component/product/handleProduct.js"></script>
 
-    </div>
-    </div>
-    </div>
 </body>
-<!-- chartjs-->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="/src/component/chart.js"></script>
-<!-- customer-->
-<script src="/src/component/cusomer.js"></script>
-<!-- Product-->
-<script src="/src/component//product.js"></script>
-<!-- Oder-->
-<script src="/src/component//oder.js"></script>
+
+
 
 
 </html>

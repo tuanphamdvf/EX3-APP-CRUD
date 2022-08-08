@@ -425,20 +425,60 @@
       "price": 12000000
     },
     {
-      "id": 2223,
-      "name": "Bàn chơi game",
-      "number": 11,
-      "createDate": " June 01, 2022",
-      "group": "chuột",
-      "price": 10200000
+      "name": "Sản phẩm chuột mới",
+      "number": "100",
+      "createDate": "2022-08-03",
+      "group": "bàn phím",
+      "price": "1000",
+      "id": 1233124
     },
     {
-      "id": 5439,
-      "name": "Bàn chơi game",
-      "number": 0,
-      "createDate": " June 01, 2022",
-      "group": "chuột",
-      "price": 31000000
+      "name": "sản phẩm cũ",
+      "number": "100",
+      "createDate": "2022-08-08",
+      "group": "bàn phím",
+      "price": "100000",
+      "id": 1233126
+    },
+    {
+      "name": "hàng sales",
+      "number": "1000",
+      "createDate": "2022-08-08",
+      "group": "bàn phím",
+      "price": "100000",
+      "id": 1233127
+    },
+    {
+      "name": "sản phẩm đã hết",
+      "number": "0",
+      "createDate": "2022-08-08",
+      "group": "ghế công thái học",
+      "price": "10000",
+      "id": 1233128
+    },
+    {
+      "name": "test default value",
+      "number": "1000",
+      "createDate": "2022-08-08",
+      "group": "ghế công thái học",
+      "price": "",
+      "id": 1233129
+    },
+    {
+      "name": "default value",
+      "number": "1000",
+      "createDate": "2022-08-08",
+      "group": "bàn phím",
+      "price": "",
+      "id": 1233130
+    },
+    {
+      "name": "test value default ",
+      "number": "",
+      "createDate": "2022-08-08",
+      "group": "",
+      "price": "",
+      "id": 1233131
     }
   ]
 }

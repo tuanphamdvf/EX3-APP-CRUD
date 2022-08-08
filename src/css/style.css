@@ -353,6 +353,7 @@ a {
   display: flex;
   margin-top: 70px;
   background-color: #f9fafb;
+  max-width: 1600px;
 }
 
 #main--page {
@@ -1923,10 +1924,10 @@ a {
   z-index: 113;
   width: 100%;
   height: 100%;
-  display: none;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.05);
+  display: none;
 }
 
 .dlproduct--wrapper {

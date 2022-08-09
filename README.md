@@ -12,8 +12,6 @@ You need to install JSON SEVER on your computer in oder to run the database
 # run the front-end
 
 Run Mock API : npm start
-then the accesses to API
-http://localhost:3000/PRODUC_ITEM
 
 # final accesses to
 

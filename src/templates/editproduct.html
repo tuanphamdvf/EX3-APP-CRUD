@@ -1,10 +1,10 @@
-<div class="editproduct--wrapper">
+<div class="editproduct--wrapper popup--edit--${item.id}">
     <div class="editproduct--header">
         <span class="editproduct--header--title">Cập nhật sản phẩm
         </span>
         <div class="editproduct--action">
-            <a href="/#product" class="editproduct--save">Lưu lại</a>
-            <a href="/#product" class="editproduct--back">Quay lại</a>
+            <a onclick="editProductJson()" class="editproduct--save">Lưu lại</a>
+            <a onclick="hidePopupDeleteProduct()" class="editproduct--back">Quay lại</a>
         </div>
     </div>
     <div class="wrapper--gribsytem">
@@ -31,8 +31,6 @@
                     <option>Còn hàng </option>
                     <option>Đã hết</option>
                 </select>
-
-
             </div>
             <div class="editproduct--date"> <input type="date" class="editproduct--input--date" /><span
                     class="editproduct--number--date">Ngày tạo </span></div>

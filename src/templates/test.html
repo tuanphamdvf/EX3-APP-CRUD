@@ -1,0 +1,77 @@
+<div class="product--item ${focusElement} ">
+    <span class="product--item--content">${item.name}</span>
+    <span class="product--item--content">${item.group}</span>
+    <span class="product--item--time">${item.createDate}</span>
+    <span class="product--item--content">${item.number} cái</span>
+    <span class="product--item--content">${total} VND</span>
+    <div class="product--item--content "><span
+            class="product--item--status ${colorStatusProduct}">${statusProduct}</span></div>
+    <div class="product--item--content">
+        <div class="container--icon--product">
+            <a onclick="showPopupEdit(${item})" class="product--icon id"="edit__product__icon ><img src="
+                /src/icon/edit.svg" alt="edit"></a>
+            <a onclick="showPopupDelete(${item.id})" class="product--icon" id="delete__product__icon"><img
+                    src="/src/icon/delete.svg" alt="delete"></a>
+            <div class="popup--delete  popup--delete--${item.id}">
+                <div class="dlproduct--wrapper">
+                    <span class="content--delete">Cảnh báo! Bạn có chắc chắn muốn xoá sản phẩm "${item.name} __ Mã SP :
+                        ${item.id}"!</span>
+                    <div class="dlproduct--wrapper--button">
+                        <a onclick="handleDeleteProduct(${item.id})" class="dlproduct--button--delete">Xoá</a>
+                        <a onclick="hidePopupDeleteProduct(${item.id})" class="dlproduct--button--back">Quay lại</a>
+                    </div>
+
+
+                </div>
+            </div>
+            <div>
+                <div class="editproduct--wrapper popup--edit--${item.id}">
+                    <div class="editproduct--header">
+                        <span class="editproduct--header--title">Cập nhật sản phẩm
+                        </span>
+                        <div class="editproduct--action">
+                            <a onclick="editProductJson()" class="editproduct--save">Lưu lại</a>
+                            <a onclick="hidePopupDeleteProduct()" class="editproduct--back">Quay lại</a>
+                        </div>
+                    </div>
+                    <div class="wrapper--gribsytem">
+                        <div class="editproduct--content">
+                            <div class="editproduct--name">
+                                <input class="editproduct--input--name" placeholder="Sản phẩm" />
+                                <span class="editproduct--name--after ">Tên sản phẩm</span>
+                            </div>
+                            <div class="editproduct--number"> <input placeholder="cái"
+                                    class="editproduct--input--number" /><span class="editproduct--number--after">Số
+                                    lượng</span></div>
+                            <div class="editproduct--group">
+                                <select class="editproduct--input--group">
+                                    <option value="" disabled selected hidden>Loại SP</option>
+                                    <option>chuột </option>
+                                    <option>bàn phím</option>
+                                    <option>ghế công thái học</option>
+                                    <option>hub</option>
+                                </select>
+
+                            </div>
+                            <div class="editproduct--status">
+                                <select class="editproduct--input--status">
+                                    <option value="" disabled selected hidden> Trạng thái</option>
+                                    <option>Còn hàng </option>
+                                    <option>Đã hết</option>
+                                </select>
+
+
+                            </div>
+                            <div class="editproduct--date"> <input type="date" class="editproduct--input--date" /><span
+                                    class="editproduct--number--date">Ngày
+                                    tạo </span></div>
+                            <div class="editproduct--price"> <input placeholder="VND"
+                                    class="editproduct--input--price" /><span class="editproduct--number--price">Giá
+                                    bán</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

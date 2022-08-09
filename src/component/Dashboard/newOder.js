@@ -41,9 +41,7 @@ const ARRAY_ODER = [
     },
 ];
 //set dot after three digits
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-}
+
 //check data in localstorage, and render
 const arrNewOder = JSON.parse(localStorage.getItem('newOder'));
 if (!arrNewOder) {

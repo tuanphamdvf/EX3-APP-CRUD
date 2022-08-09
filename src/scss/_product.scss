@@ -467,6 +467,22 @@
 }
 
 //edit product
+.wrapper--edit {
+    display: none;
+    width: calc(100% - 250px);
+    max-width: 1350px;
+    height: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: $gray050;
+    margin-top: -16px;
+    border-radius: 16px;
+    position: fixed;
+    left: 250px;
+    top: 70px;
+}
 .editproduct--wrapper {
     height: 372px;
     box-sizing: border-box;
@@ -474,6 +490,7 @@
     border-radius: 16px;
     padding: 16px;
     margin: 16px;
+    width: 98%;
 }
 .editproduct--header {
     @include flexBetween;
@@ -554,6 +571,20 @@
     display: flex;
     align-items: center;
     padding-left: 16px;
+    position: relative;
+}
+.editproduct--group--after {
+    background-color: $white;
+    height: 12px;
+    width: 56px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
 }
 .editproduct--date {
     width: 100%;
@@ -613,6 +644,24 @@
     display: flex;
     align-items: center;
     padding-left: 16px;
+    position: relative;
+}
+
+#input__edit__status {
+    width: 100%;
+}
+.editproduct--status--after {
+    background-color: $white;
+    height: 12px;
+    width: 68px;
+    border-radius: 2px;
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $gray500;
 }
 .editproduct--price {
     width: 100%;
@@ -933,4 +982,23 @@
     height: 39px;
     cursor: pointer;
     @include flexCenter;
+}
+.addproduct--name--warning {
+    font-size: 12px;
+    color: $red600;
+    position: absolute;
+    bottom: -24px;
+    left: 16px;
+    display: none;
+}
+.wrapper--footer--edit {
+    padding: 0px;
+    box-sizing: border-box;
+    background: $white;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 1317px;
+    margin-left: 16px;
+    margin-bottom: 86px;
 }

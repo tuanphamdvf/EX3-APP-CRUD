@@ -15,17 +15,21 @@
                             lọc</a></div>
                 </div>
             </div>
-            <div class="filter--wrapper">
+            <div class="filter--wrapper" id="filter__id">
                 <div class="wrapper--gribsytem--filter">
                     <div class="filter--content">
                         <div class="filter--name">
-                            <input class="filter--input--name" placeholder="Sản phẩm" />
+
+                            <input class="filter--input--name filter__value" id="filter__name" placeholder="Sản phẩm">
+
+                            </input>
                         </div>
-                        <div class="filter--number"> <input placeholder="cái" class="filter--input--number" /><span
-                                class="filter--number--after">Số lượng</span></div>
+                        <div class="filter--number"> <input id="filter__number" placeholder="cái"
+                                class="filter--input--number filter__value" /><span class="filter--number--after">Số
+                                lượng</span></div>
                         <div class="filter--group">
-                            <select class="filter--input--group">
-                                <option value="" disabled selected hidden>Loại SP</option>
+                            <select id="filter__group" class="filter--input--group filter__value">
+                                <option value="">Loại SP</option>
                                 <option>chuột </option>
                                 <option>bàn phím</option>
                                 <option>ghế công thái học</option>
@@ -34,10 +38,10 @@
 
                         </div>
                         <div class="filter--status">
-                            <select class="filter--input--status">
-                                <option value="" disabled selected hidden> Trạng thái</option>
+                            <select id="filter__status" class="filter--input--status filter__value">
+                                <option value=""> Trạng thái</option>
                                 <option>Còn hàng </option>
-                                <option>Đã hết</option>
+                                <option>Hết hàng</option>
 
                             </select>
                         </div>
@@ -57,7 +61,7 @@
                     <span class="product--header--title">CHỨC NĂNG</span>
                 </div>
             </div>
-            <div class="product--wrapper--item" id="product__id">
+            <div class="product--wrapper--item" id="product--filter__id">
                 <!-- render from product.js -->
             </div>
             <div class="wrapper--paging">

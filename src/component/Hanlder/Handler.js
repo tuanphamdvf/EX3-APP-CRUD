@@ -1,4 +1,4 @@
-//---ROUTER--
+//----ROUTER----
 //make  path routers
 const routes = {
     404: {
@@ -67,7 +67,7 @@ async function locationHandler() {
 window.addEventListener('hashchange', locationHandler, false);
 locationHandler();
 
-//---HANDLER ----
+//----HANDLER -----
 //API fake
 const productApi = 'http://localhost:3000/PRODUC_ITEM';
 //get date current
@@ -139,7 +139,7 @@ window.addEventListener('load', function () {
         window.location.reload();
     }
 });
-//--ERROR--
+//----ERROR----
 const hanleError = () => {
     setTimeout(() => {
         window.location.reload();

@@ -1,4 +1,4 @@
-// RENDER PRODUCT
+//---- RENDER FROM ADDPRODUCT----
 function renderAddProduct(elementAdd) {
     elementAdd.innerHTML = `<div id ="from-1" class="addproduct--header">
         <span class="addproduct--header--title">Thêm mới sản phẩm
@@ -89,7 +89,7 @@ function handleOnclickAddproduct() {
         addProductJson(itemData);
     }
 }
-//---DELETE PRODUCT---
+//----DELETE PRODUCT----
 //function:  When using onclick, remove one product.
 function handleDeleteProduct(id) {
     let options = {
@@ -111,7 +111,7 @@ function hidePopupDeleteProduct(id) {
     const buttonHandleDelete = document.querySelector('.popup--delete--' + id);
     buttonHandleDelete.style.display = 'none';
 }
-//--FILLTER--
+//----FILLTER----
 
 window.addEventListener('load', () => {
     const elementFilterProdcut = document.getElementById('product--filter__id');
@@ -123,7 +123,6 @@ window.addEventListener('load', () => {
                 return response.json();
             })
             .then(function (productItem) {
-                // renderProducttable(elementFilterProdcut, productItem);
                 paging(elementFilterProdcut, productItem);
             });
         filterValue.addEventListener('input', filterGoods);
@@ -154,7 +153,7 @@ window.addEventListener('load', () => {
         }
     }
 });
-//--- EDIT ---
+//---- EDIT ----
 //Show edit product, get value and handler edit
 function showPopupEdit(id) {
     const buttonHandleEdit = document.querySelector('.popup--edit--' + id);

@@ -1,10 +1,10 @@
-//---RENDER PRODUCT PAGE---
-// // get array item in one page
+//----RENDER PRODUCT PAGE----
+// get array item in one page
 function paginate(array, page_size, page_number) {
     const reverse = [...array].reverse();
     return reverse.slice((page_number - 1) * page_size, page_number * page_size);
 }
-// //get tottal page
+//get tottal page
 function countPage(array, page_size) {
     if (array.length > page_size) {
         return Math.ceil(array.length / page_size);
@@ -16,6 +16,7 @@ function countPage(array, page_size) {
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 }
+//function render product
 function renderProducttable(elementProduct, PRODUC_ITEM) {
     let focusElement;
     let statusProduct;

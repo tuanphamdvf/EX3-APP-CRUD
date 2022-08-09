@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
                     },
                 },
             },
-            //----------- custom tooltip ------------
+            //---- custom tooltip ----
             plugins: {
                 tooltip: {
                     // Disable the on-canvas tooltip

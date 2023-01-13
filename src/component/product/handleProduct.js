@@ -43,6 +43,7 @@ function renderAddProduct(elementAdd) {
 // ---- ADD PRODUCT ----
 //Function - add one product to the last array
 function addProductJson(data, callback) {
+    console.log(data);
     let options = {
         method: 'POST',
         body: JSON.stringify(data),
@@ -50,11 +51,12 @@ function addProductJson(data, callback) {
             'Content-Type': 'application/json',
         },
     };
-    fetch(productApi, options)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(callback);
+    console.log(options.body);
+    // fetch(productApi, options)
+    //     .then(function (response) {
+    //         return response.json();
+    //     })
+    //     .then(callback);
 }
 
 // Function -obtain input product value

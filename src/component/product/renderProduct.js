@@ -106,7 +106,7 @@ function renderProducttable(elementProduct, PRODUC_ITEM) {
                     </div>
                     <div class="wrapper--footer--edit">
                     <div class="footer">
-                    <span class="footer--content">© 2022 VnSolution. All rights reserved.</span>
+                    <span class="footer--content">All rights reserved.</span>
                     <div class="footer--wrapper--icon">
                     <img class="footet--icon" src="/src/icon/fb.svg" />
                     <img class="footet--icon" src="/src/icon/twitter.svg" />
